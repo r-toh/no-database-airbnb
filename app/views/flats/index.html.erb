@@ -1,0 +1,17 @@
+<h1>Flats</h1>
+
+  <% @flats.each do |flat| %>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src=<%= flat["imageUrl"] %> alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat["name"] %></h5>
+      <p class="card-text">$<%= flat["price"] %></p>
+      <%= link_to "Go somewhere", flat_path(flat["id"])%>
+    </div>
+  </div>
+  <% end %>
+
+
+
+<%# {"id"=>211, "name"=>"Bohemian and Chic in Paris", "imageUrl"=>"https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg", "price"=>90, "priceCurrency"=>"EUR", "lat"=>48.827855, "lng"=>2.350774} %>
